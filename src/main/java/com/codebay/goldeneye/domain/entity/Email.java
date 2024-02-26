@@ -6,8 +6,18 @@ import com.codebay.goldeneye.domain.valueObject.Surname;
 
 public class Email {
 
+  // Atributos
   private String email;
 
+  /**
+   * Constructor
+   * @param name
+   * @param surname
+   * @param office
+   * 
+   * Generar el email del empleado
+   * 
+   */
   public Email(Name name, Surname surname, Office office) {
 
     // Primera letra del nombre
@@ -28,6 +38,10 @@ public class Email {
     
   }
 
+  /**
+   * Obtener el email
+   * @return email
+   */
   public String getEmail() {
     return email;
   }

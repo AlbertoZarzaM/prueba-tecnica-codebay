@@ -4,8 +4,10 @@ import java.util.regex.Pattern;
 
 public class Name {
 
+  //atributos de la clase
   private String name;
 
+  // Mensajes de error
   public static final int MAX_LENGTH = 2000;
   public static final String REGULAR_EXPRESSION = "^[A-Za-z][a-zA-Z]*$";
   public static final String ERROR_NOT_DEFINED = "Name of the employee is not defined";
@@ -20,7 +22,10 @@ public class Name {
     this.name = name;
   }
 
-
+  /**
+   * Comprobar si el nombre es válido
+   * @param name
+   */
   private void isValid(String name) {
     if (name == null) {
       throw new IllegalArgumentException(ERROR_NOT_DEFINED);
@@ -36,7 +41,10 @@ public class Name {
     }
   }
 
-
+  /**
+   * Obtener el nombre
+   * @return name
+   */
   public String getName() {
     return name;
   }  

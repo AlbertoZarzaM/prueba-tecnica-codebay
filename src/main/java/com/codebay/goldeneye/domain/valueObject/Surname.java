@@ -4,6 +4,10 @@ import java.util.regex.Pattern;
 
 public class Surname {
 
+  /**
+   * Apellido del empleado
+   * 
+   */
   private String surname;
 
   public static final int MAX_LENGTH = 2000;
@@ -13,13 +17,19 @@ public class Surname {
   public static final String ERROR_MAX_LENGTH = "Name of the employee cannot exceed " + MAX_LENGTH + " characters";
   public static final String ERROR_WRONG_FORMAT = "Name of the employee has wrong format";
 
-
+  /**
+   * Constructor
+   * @param surname
+   */
   public Surname(String surname) {
     this.isValid(surname);
     this.surname = surname;
   }
 
-
+  /**
+   * Comprobar si el apellido es válido
+   * @param name
+   */
   private void isValid(String name) {
     if (name == null) {
       throw new IllegalArgumentException(ERROR_NOT_DEFINED);
@@ -35,6 +45,10 @@ public class Surname {
     }
   }
 
+  /**
+   * Obtener el apellido
+   * @return surname
+   */
   public String getSurname() {
     return surname;
   }

@@ -17,11 +17,23 @@ import com.codebay.goldeneye.domain.valueObject.Surname;
 @Controller
 public class WebController {  
 
+    /**
+     * Mostrar el formulario
+     * @return
+     */
     @GetMapping("/")
     public ModelAndView index() {
         return new ModelAndView("index");
     }
 
+    /**
+     * Procesar el formulario
+     * @param name
+     * @param surname
+     * @param office
+     * @param department
+     * @return
+     */
     @PostMapping("/")
     public ResponseEntity<String> processForm(
             @RequestParam(name = "Name", required = true) String name,
