@@ -34,7 +34,7 @@ public class Email {
 
     // Email
     this.email = firstLetterName.toLowerCase() + firstSurname.toLowerCase() + "." + 
-    departmentName.toLowerCase() +"@"  + officeName.toLowerCase() + ".goldeneye.com";
+    departmentName.toLowerCase().replaceAll(" ", "") +"@"  + officeName.toLowerCase().replaceAll(" ", "") + ".goldeneye.com";
     
   }
 
