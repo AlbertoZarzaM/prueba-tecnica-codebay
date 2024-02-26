@@ -10,8 +10,8 @@ public class Office {
    * Departamentos de las oficinas
    *
    */
-  private String[] Milan = {"Desing", "Business", "Advertising"};
-  private String[] Spain = {"Research & development", "Business"};
+  private String[] Milan = {"Design", "Business", "Advertising"};
+  private String[] Spain = {"ResearchDevelopment", "Business"};
   private String[] NewYork = {"Business", "Advertising"};
 
   // Mensaje de error

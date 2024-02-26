@@ -13,6 +13,7 @@ import com.codebay.goldeneye.domain.valueObject.Department;
 import com.codebay.goldeneye.domain.valueObject.Name;
 import com.codebay.goldeneye.domain.valueObject.Office;
 import com.codebay.goldeneye.domain.valueObject.Surname;
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 @Controller
 public class WebController {  
@@ -35,7 +36,7 @@ public class WebController {
      * @return
      */
     @PostMapping("/")
-    public ResponseEntity<String> processForm(
+    public ModelAndView processForm(
             @RequestParam(name = "Name", required = true) String name,
             @RequestParam(name = "Surname", required = true) String surname,
             @RequestParam(name = "Office", required = true) String office,
@@ -47,10 +48,18 @@ public class WebController {
                 new Office(office, new Department(department)));
             
             // Devolver una respuesta exitosa con el mensaje
-            return ResponseEntity.ok(email.getEmail());
+            
+            ModelAndView modelAndView = new ModelAndView("index");
+
+
+            modelAndView.addObject("email", email.getEmail());
+            return modelAndView;
+
         } catch (Exception e) {
             // Manejar cualquier error que pueda ocurrir
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+            ModelAndView vista = new ModelAndView("index");
+            vista.addObject("error", e.getMessage());
+            return vista;
         }
     }
 }
