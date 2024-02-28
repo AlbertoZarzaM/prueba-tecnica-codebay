@@ -31,12 +31,6 @@ public class WebController {
         return new ModelAndView("index");
     }
 
-    
-
-
-
-
-
     /**
      * Procesar el formulario para la web
      * @param name
@@ -83,5 +77,4 @@ public class WebController {
             return vista;
         }
     }
-    
 }

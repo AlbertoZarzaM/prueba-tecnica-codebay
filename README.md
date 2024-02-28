@@ -21,6 +21,8 @@ On the server, additional validation is performed to ensure the received data is
 - CSS: For the visual styling of the form.
 - JavaScript: For client-side validation.
 - Spring Boot: For handling requests on the server side.
+- Maven: For project management and dependency management.
+- Java: For server-side validation and processing.
 
 ## Using the Form
 

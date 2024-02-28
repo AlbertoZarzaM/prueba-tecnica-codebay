@@ -99,23 +99,22 @@
             var departmentSelect = document.getElementById("Department");
             var selectedOffice = officeSelect.value;
 
-            // Limpiar select de departamentos
-            departmentSelect.innerHTML = '';
-
             // Definir los departamentos permitidos para cada oficina
             var departments = {
-                "Milan": [" ","Design", "Business", "Advertising"],
-                "Spain": [" ","ResearchDevelopment", "Business"],
-                "NewYork": [" ","Business", "Advertising"]
+                "Milan": ["Design", "Business", "Advertising"],
+                "Spain": ["ResearchDevelopment", "Business"],
+                "NewYork": ["Business", "Advertising"]
             };
 
             // Agregar las opciones de departamento permitidas para la oficina seleccionada
+            
             departments[selectedOffice].forEach(function(department) {
                 var option = document.createElement("option");
                 option.text = department;
                 option.value = department;
                 departmentSelect.add(option);
             });
+
         }
     </script>
 </head>
@@ -132,7 +131,7 @@
         <input type="text" id="Surname" name="Surname">
         <label for="Office">Oficina:</label>
         <select id="Office" name="Office" onchange="actualizarDepartamentos()">
-            <option value=""></option>
+            <option value="">Please choose an option</option>
             <option value="Milan">Milan</option>
             <option value="NewYork">New York</option>
             <option value="Spain">Spain</option>
@@ -140,7 +139,7 @@
 
         <label for="Department">Departamento:</label>
         <select id="Department" name="Department">
-            <option value=""></option>
+            <option value="">Please choose an option</option>
         </select>
         <br><br>
         <input type="submit" value="Submit">

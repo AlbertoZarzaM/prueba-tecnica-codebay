@@ -31,7 +31,7 @@ public class ApiIntegration {
     HttpEntity<String> requestEntity = new HttpEntity<>(requestBody, headers);
 
     RestTemplate restTemplate = new RestTemplate();
-    String apiUrl = "URL_DE_TU_API_AQUI"; // Reemplaza esto con la URL real de tu API
+    String apiUrl = "https://dummy.restapiexample.com/api/v1/employee/1"; // Reemplaza esto con la URL real de tu API
     ResponseEntity<String> responseEntity = restTemplate.postForEntity(apiUrl, requestEntity, String.class);
     
     // Procesar la respuesta de la API
@@ -48,7 +48,4 @@ public class ApiIntegration {
     }
     return status;
   }
-  
-
-  
 }
