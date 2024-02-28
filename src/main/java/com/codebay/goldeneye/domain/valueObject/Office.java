@@ -14,6 +14,8 @@ public class Office {
   private String[] Spain = {"ResearchDevelopment", "Business"};
   private String[] NewYork = {"Business", "Advertising"};
 
+
+
   // Mensaje de error
   public static final String NOT_NULL = "Office can't be null.";
 

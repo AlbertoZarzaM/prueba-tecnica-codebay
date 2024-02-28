@@ -23,8 +23,8 @@ public class Email {
     // Primera letra del nombre
     String firstLetterName = name.getName().substring(0, 1);
 
-    // Primer apellido
-    String firstSurname = surname.getSurname();
+    // Primer apellido del empleado 
+    String firstSurname = surname.getSurname().split(" ")[0];
 
     // Departamento
     String departmentName = office.getOfficeDepa().getDepartment();
@@ -33,7 +33,7 @@ public class Email {
     String officeName = office.getOffice();
 
     // Email
-    this.email = firstLetterName.toLowerCase() + firstSurname.toLowerCase() + "." + 
+    this.email = firstLetterName.toLowerCase().replaceAll(" ", "") + firstSurname.toLowerCase().replaceAll(" ", "") + "." + 
     departmentName.toLowerCase().replaceAll(" ", "") +"@"  + officeName.toLowerCase().replaceAll(" ", "") + ".goldeneye.com";
     
   }
